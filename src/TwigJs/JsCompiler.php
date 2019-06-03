@@ -18,6 +18,7 @@
 
 namespace TwigJs;
 
+use TwigJs\Compiler\DoCompiler;
 use TwigJs\Compiler\InlinePrintCompiler;
 use TwigJs\Compiler\MacroCompiler;
 use TwigJs\Compiler\Test\SameAsCompiler;
@@ -115,7 +116,7 @@ class JsCompiler extends \Twig_Compiler
 
         $this->typeCompilers = array(
             'Twig\Node\Node' => new NodeCompiler(),
-            'Twig\Node\DoNode' => new NodeCompiler(),
+            'Twig\Node\DoNode' => new DoCompiler(),
             'Twig\Node\BodyNode' => new BodyCompiler(),
             'Twig\Node\ModuleNode' => new ModuleCompiler\GoogleCompiler(),
             'Twig\Node\BlockNode' => new BlockCompiler(),

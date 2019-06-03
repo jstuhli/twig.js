@@ -43,7 +43,7 @@ class InlinePrintCompiler implements TypeCompilerInterface
             ->addDebugInfo($node)
             ->write('sb.append(')
             ->subcompile($node->getNode('node'))
-            ->raw(");\n")
+            ->raw(")")
         ;
     }
 }
